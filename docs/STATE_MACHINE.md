@@ -17,34 +17,34 @@ This document defines the state transitions for the medication refill agent work
 
 ## State Transition Diagram
 
-See the [Mermaid state diagram](./diagrams/state_machine.mermaid) for a visual representation.
+See the [state machine diagram](./diagrams/state_machine.png) for a visual representation.
 
 ## Agent Responsibilities by State
 
-### State 1-2: Pharmacy Agent (AI Agent 1)
+### State: Pharmacy Agent (AI Agent 1)
 - Intent classification
 - Entity extraction
 - Safety validation (allergy, DDI, dosage)
 - Controlled substance policy enforcement
 
-### State 3: EHR Agent
+### State: EHR Agent
 - Patient identity verification
 - Clinical data retrieval (medications, allergies, labs)
 - Backend inventory check
 
-### State 4-5: Central Intelligence (AI Agent 2 - ReAct)
+### State: Central Intelligence (AI Agent 2 - ReAct)
 - Escalation routing logic
 - Context package assembly
 - Physician notification orchestration
 
-### State 6-7: Dispensation Connector
+### State: Dispensation Connector
 - Order submission to Pixsys/Omnicell
 - Status polling
 - User notification
 
 ## Circuit Breaker Triggers
 
-The following conditions trigger a circuit breaker (State 5 escalation):
+The following conditions trigger a circuit breaker (State escalation):
 
 1. **Low confidence** in intent/entity extraction (<70%)
 2. **Identity verification failure** (DOB mismatch)
