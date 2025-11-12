@@ -30,8 +30,16 @@ Multi-agent communication flows (coming soon):
 - **Escalation Path**: Controlled substance requiring physician co-signature
 
 
-## Demo Scenarios
+## 🔬 Technology Stack
+
+- **LLM Orchestration**: LangGraph, LangChain
+- **LLM Provider**: Anthropic Claude Sonnet 4
+- **Vector Store**: FAISS / ChromaDB
+- **State Management**: Redis
+- **Observability**: OpenTelemetry, Prometheus, LangFuse
+- **Policy Engine**: OPA (Open Policy Agent)
+- **Testing**: Pytest, Hypothesis (property-based)
 
 
 ## Architecture Deep-Dive
-See [ARCHITECTURE.md](./ARCHITECTURE.md)
+See [ARCHITECTURE.md](./docs/ARCHITECTURE.md)
