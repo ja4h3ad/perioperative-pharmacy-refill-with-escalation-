@@ -32,13 +32,12 @@ Multi-agent communication flows (coming soon):
 
 ## 🔬 Technology Stack
 
-- **LLM Orchestration**: LangGraph, LangChain
-- **LLM Provider**: Anthropic Claude Sonnet 4
-- **Vector Store**: FAISS / ChromaDB
+- **LLM Orchestration**: LangGraph, LangChain, DSPy
+- **LLM Provider**: ReAct based Central Intelligence, task-tuned agent models
+- **Vector Store**: Chroma, Redis or Weaviate
 - **State Management**: Redis
 - **Observability**: OpenTelemetry, Prometheus, LangFuse
-- **Policy Engine**: OPA (Open Policy Agent)
-- **Testing**: Pytest, Hypothesis (property-based)
+- **Testing**: Pytest or Hypothesis (property-based)
 
 
 ## Architecture Deep-Dive
