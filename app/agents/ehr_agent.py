@@ -8,7 +8,7 @@ from app.safety.circuit_breaker import AsyncCircuitBreaker
 
 
 class EHRAgent:
-    def __init__(self, fhir_base_url: str = "https://fhir.example.com"):
+    def __init__(self, fhir_base_url: str = "https://fhir-url.com"):
         self.fhir_base_url = fhir_base_url
         self.circuit_breaker = AsyncCircuitBreaker(
             failure_threshold=5,
